@@ -4,15 +4,15 @@ const Model = {
         selectedPage: "dashboard",
         pages: ["dashboard", "userProfile", "feed", "usersProfile", "accountLogin", "accountRegister"],
     },
-    input:   {
+    input: {
         register: {
             userName: null,
             password: null,
-            email: null,   
+            email: null,
         },
         login: {
             password: null,
-            email: null,   
+            email: null,
         },
         dashboard: {
             commentField: null,
@@ -38,13 +38,13 @@ const Model = {
         },
         feed: {
             searchField: null,
-            
+
         },
         User: {
             UserId: 0,
             commentField: null,
         }
-        
+
     },
     data: {
         drinks: [
@@ -83,32 +83,36 @@ const Model = {
                 id: 1,
                 name: 'Martin',
                 mail: 'Mrtn@fakemail.com',
-                password: '123',
-                myDrinks: [],
-                drunkToday: [
-                    { id: 1, count: 3 },
-                    { id: 2, count: 6 },
-                    { id: 3, count: 4 },
-                    { id: 4, count: 1 },
-                ],
-                caffeineHistory: [
-                    {
-                        totalCaffeineAmount: 2000,
-                        dato: { year: 2025, month: 3, day: 20 }
-                    },
-                    {
-                        totalCaffeineAmount: 700,
-                        dato: { year: 2025, month: 3, day: 21 }
-                    },
-                ],
+                password: '123',                
                 moneySaved: 0,
-                Comments: [
-                    {useridSender: 0, comment: 'Hello'},
-                    {useridSender: 2, comment: 'Hvem er du'},
-                    {useridSender: 0, comment: 'Jeg er meg'},
-
-                ]
-            }
-        ]
+            },
+        ],
+        caffeineHistory: [
+            {
+                totalCaffeineAmount: 2000,
+                count: 1,
+                dato: { year: 2025, month: 3, day: 20 }
+            },
+            {
+                totalCaffeineAmount: 2000,
+                dato: { year: 2025, month: 3, day: 20 }
+            },
+            {
+                totalCaffeineAmount: 700,
+                dato: { year: 2025, month: 3, day: 21 }
+            },
+        ],
+        comments: [
+            {userIdReciever: 1, userIdSender: 0, comment: 'Hello' },
+            {userIdReciever: 1, userIdSender: 2, comment: 'Hvem er du' },
+            {userIdReciever: 1, userIdSender: 0, comment: 'Jeg er meg' },
+        ],
+        drunkToday: [
+            { userID: 1, drinkId: 1, count: 3 },
+            { userID: 1, drinkId: 2, count: 6 },
+            { userID: 1, drinkId: 3, count: 4 },
+            { userID: 1, drinkId: 4, count: 1 },
+        ],
+        myDrinks: []
     }
 }
