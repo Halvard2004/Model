@@ -1,82 +1,107 @@
 const Model = {
     app: {
         selectedPage: "dashboard",
-        pages: ["dashboard", "userProfile", "feed", "usersProfile", "accountLogin", "accountRegister"],      
+        pages: ["dashboard", "userProfile", "feed", "usersProfile", "accountLogin", "accountRegister"],
     },
-    input: {
+    input:   {
+        register: {
+            userName: null,
+            password: null,
+            email: null,   
+        },
+        login: {
+            password: null,
+            email: null,   
+        },
         dashboard: {
-            commentField: "",
+            commentField: null,
+        },
+
+        profile: {
+            information: {
+                name: null,
+                email: null,
+            },
+            newDrink: {
+                drinkname: null,
+                price: 0,
+                size: 0,
+                caffeine: 0
+            },
+            caffeineGoal: {
+                caffeineDayGoal: 0,
+                priceDayGoal: 0,
+                caffeineBefore: 0,
+                priceBefore: 0,
+            }
+        },
+        feed: {
+            searchField: null,
             
+        },
+        User: {
+            UserId: 0,
+            commentField: null,
         }
+        
     },
     data: {
         drinks: [
             {
                 id: 1,
                 drinkName: 'monster',
-                pricePerCan: 29.90,
-                caffeinePerHundred: 30,
-                canSize: 500,
-                totalCaffeine: ((size / 100) * caffeinePerHundred),
+                pricePerDrink: 29.90,
+                totalCaffeine: 150,
+                drinkSize: 500,
             },
             {
                 id: 2,
                 drinkName: 'redbull',
-                pricePerCan: 22.90,
-                caffeinePerHundred: 30,
-                litres: 0.25,
-                totalCaffeine: (litres * caffeinePerHundred * 10),
+                pricePerDrink: 22.90,
+                totalCaffeine: 75,
+                drinkSize: 250,
             },
             {
                 id: 3,
                 drinkName: 'kaffe',
-                pricePerCan: 40,
-                caffeinePerHundred: 40,
-                canSize: 500,
-                totalCaffeine: ((size / 100) * caffeinePerHundred),
+                pricePerDrink: 40,
+                totalCaffeine: 200,
+                drinkSize: 500,
             },
             {
                 id: 4,
                 drinkName: 'battery',
-                pricePerCan: 15,
-                caffeinePerHundred: 32,
-                canSize: 500,
-                totalCaffeine: ((size / 100) * caffeinePerHundred),
+                pricePerDrink: 15,
+                totalCaffeine: 160,
+                drinkSize: 500,
             },
 
         ],
-        drunkToday: [
-            {id: 1, count: 3},
-            {id: 2, count: 6},
-            {id: 3, count: 4},
-            {id: 4, count: 1},
-            
-            
+        users: [
+            {
+                id: 1,
+                name: 'Martin',
+                mail: 'Mrtn@fakemail.com',
+                password: '123',
+                myDrinks: [],
+                drunkToday: [
+                    { id: 1, count: 3 },
+                    { id: 2, count: 6 },
+                    { id: 3, count: 4 },
+                    { id: 4, count: 1 },
+                ],
+                caffeineHistory: [
+                    {
+                        totalCaffeineAmount: 2000,
+                        dato: { year: 2025, month: 3, day: 20 }
+                    },
+                    {
+                        totalCaffeineAmount: 700,
+                        dato: { year: 2025, month: 3, day: 21 }
+                    },
+                ],
+                moneySaved: 0,
+            }
         ]
     }
-}
-
-// Husk Fjern alt under etter ferdig med model
-function addToDrunkToday(object) {
-    // if drunktoday does not contain object.id, 
-    drunkToday.push(object.id, count)
-    // if drunktoday contains object.id
-    let index = drunkToday.indexOf(object)
-    drunkToday[index].count++;
-}
-
-function displayDrink(drink) {
-    drink = drinks[drink.id];
-    let html = /*HTML*/ `
-    <div>Name: ${drink.name}</div>
-    <div>pricePerCan: ${drink.pricePerCan}</div>
-    <div>coffeineAmount: ${drink.caffeinePerHundred}</div>
-    `;
-
-}
-
-function EmptyDrunktoday(){
-    memory.push(drunktoday, dato)
-    drunkToday = {}
-    
 }

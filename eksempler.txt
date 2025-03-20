@@ -1,0 +1,30 @@
+
+// Husk Fjern alt under etter ferdig med model
+function addToDrunkToday(object) {
+    // if drunktoday does not contain object.id, 
+    drunkToday.push(object.id, count)
+    // if drunktoday contains object.id
+    let index = drunkToday.indexOf(object)
+    drunkToday[index].count++;
+}
+
+function displayDrink(drink) {
+    drink = drinks[drink.id];
+    let html = /*HTML*/ `
+    <div>Name: ${drink.name}</div>
+    <div>pricePerDrink: ${drink.pricePerDrink}</div>
+    <div>coffeineAmount: ${drink.caffeinePerHundred}</div>
+    `;
+
+}
+
+function EmptyDrunktoday() {
+    memory.push(drunktoday, dato)
+    drunkToday = {}
+
+}
+
+
+for (let i = users.caffeineHistory.length; i > users.caffeineHistory.length - ; i--;) {
+
+}
