@@ -2,7 +2,7 @@
 const Model = {
     app: {
         selectedPage: "dashboard",
-        pages: ["dashboard", "userProfile", "feed", "usersProfile", "accountLogin", "accountRegister"],
+        // pages: ["dashboard", "userProfile", "feed", "usersProfile", "accountLogin", "accountRegister"],
     },
     input: {
         register: {
