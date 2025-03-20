@@ -102,6 +102,12 @@ const Model = {
                     },
                 ],
                 moneySaved: 0,
+                Comments: [
+                    {useridSender: 0, comment: 'Hello'},
+                    {useridSender: 2, comment: 'Hvem er du'},
+                    {useridSender: 0, comment: 'Jeg er meg'},
+
+                ]
             }
         ]
     }
