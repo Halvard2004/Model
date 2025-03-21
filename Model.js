@@ -87,32 +87,25 @@ const Model = {
                 moneySaved: 0,
             },
         ],
-        caffeineHistory: [
-            {
-                totalCaffeineAmount: 2000,
-                count: 1,
-                dato: { year: 2025, month: 3, day: 20 }
-            },
-            {
-                totalCaffeineAmount: 2000,
-                dato: { year: 2025, month: 3, day: 20 }
-            },
-            {
-                totalCaffeineAmount: 700,
-                dato: { year: 2025, month: 3, day: 21 }
-            },
-        ],
         comments: [
             {userIdReciever: 1, userIdSender: 0, comment: 'Hello' },
             {userIdReciever: 1, userIdSender: 2, comment: 'Hvem er du' },
             {userIdReciever: 1, userIdSender: 0, comment: 'Jeg er meg' },
         ],
-        drunkToday: [
-            { userID: 1, drinkId: 1, count: 3 },
-            { userID: 1, drinkId: 2, count: 6 },
-            { userID: 1, drinkId: 3, count: 4 },
-            { userID: 1, drinkId: 4, count: 1 },
-        ],
-        myDrinks: []
+        myDrinks: [{id: 1, userID: 1, drinkid: 2}],
+
+        drinkHistory: [{
+            userId: 1,
+            drinkId: 1,
+            dato: `dato`,
+        }, {
+            userId: 1,
+            drinkId: 2,
+            dato: `dato`,
+        }, {
+            userId: 1,
+            drinkId: 1,
+            dato: `dato`,
+        }]
     }
 }
